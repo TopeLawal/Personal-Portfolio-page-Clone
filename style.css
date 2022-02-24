@@ -1,0 +1,221 @@
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--main-white);
+}
+.page-wrapper {
+    position: relative;
+}
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background: var(--main-red);
+    color: var(--main-white);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4);
+}
+ul {
+    display: flex;
+}
+li {
+    margin: 0px 10px 0px 10px;
+    list-style: none;
+}
+a{
+    /* font-size: 22px; */
+    text-decoration: none;
+    color: var(--main-white);
+    display: block;
+    padding: 20px;
+}
+ul a:hover {
+    background-color: var(--main-blue);  
+}
+#welcome-section {
+    background: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%,#181719 100% );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    color: var(--main-white);
+}
+#title {
+    font-size: 50px;
+}
+#desc {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--main-red);
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 200;
+} 
+#projects {
+    background-color: var(--main-blue);
+    text-align: center;
+    padding: 100px 20px;
+}
+#projects > h2 {
+    color: var(--main-white);
+    font-size: 35px;
+    width: 640px;
+    margin: 0px auto 40px auto;
+    border-bottom: 2px solid;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 1280;
+}
+.project-tile {
+    
+}
+img {
+    width: 390px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.project-title {
+    background-color: var(--main-gray);
+    padding: 15px 5px;
+    text-align: center;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);   
+}
+.code {
+    color: var(--main-gray);
+    transition: background 0.3s ease-in;
+}
+.project-tile:hover .code {
+    color: #ff7f50;
+}
+
+.btn {
+    background-color: var(--main-gray);
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    padding: 0px 10px;
+    font-size: 18px;
+    display: inline-block;
+}
+.btn > i {
+    font-size: 30px;
+    /* Position icon inline with text */
+    position: relative;
+    top: 0.15em;
+}
+.btn-show-all {
+    margin-top: 50px;
+    transition: background 0.3s ease-out;
+}
+.btn-show-all:hover {
+    background-color: var(--main-red);
+}
+
+.btn-show-all:hover > i {
+    margin-left: -2px;
+}
+.btn-show-all > i {
+    margin-left: 10px;
+    transition: transform 0.3s ease-out;
+}
+.contact-section {
+    background-color: var(--main-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    padding: 0px 20px;
+}
+.contact-section-header > h2 {
+    font-size: 50px;
+}
+.contact-section-header > p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 100;
+}
+.contact-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* max-width: 980px; */
+    margin-top: 20px;
+    flex-wrap: wrap;
+    font-size: 25px;
+    text-shadow: 2px 2px 1px #1f1f1f;
+}
+.brand-logo {
+    width: 35px;
+    height: 30px;
+    margin-right: 5px;
+    display: inline-block;
+    padding: 0px;
+    /* Position svg inline with text */
+    position: relative;
+    top: 0.15em;
+}
+.contact-details {
+    transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+    transform: translateY(8px);
+}
+footer {
+    background-color: var(--main-gray);
+    border-top: 4px solid var(--main-red);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer p > a{
+    text-decoration: none;
+    color: var(--main-white);
+    display: inline;
+    padding: 0px;
+}
+.freecodecamp {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 0.3em; 
+}
