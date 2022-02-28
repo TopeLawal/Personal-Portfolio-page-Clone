@@ -27,6 +27,9 @@ body {
 }
 .page-wrapper {
     position: relative;
+    width: 1440px;
+    max-width: 100%;
+    height: auto;
 }
 #navbar {
     display: flex;
@@ -38,6 +41,7 @@ body {
     left: 0px;
     width: 100%;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 ul {
     display: flex;
@@ -51,7 +55,7 @@ a{
     text-decoration: none;
     color: var(--main-white);
     display: block;
-    padding: 20px;
+    padding: 20px 10px;
 }
 ul a:hover {
     background-color: var(--main-blue);  
@@ -91,17 +95,13 @@ ul a:hover {
 }
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    width: 100%;
-    max-width: 1280;
-}
-.project-tile {
-    
+    justify-items: center;
 }
 img {
-    width: 390px;
-    height: 400px;
+    width: 327.63px;
+    height: 319.14px;
     object-fit: cover;
     display: block;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -110,6 +110,8 @@ img {
     background-color: var(--main-gray);
     padding: 15px 5px;
     text-align: center;
+    font-size: 18px;
+    width: 327.63px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);   
 }
 .code {
@@ -174,7 +176,6 @@ img {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* max-width: 980px; */
     margin-top: 20px;
     flex-wrap: wrap;
     font-size: 25px;
@@ -218,4 +219,58 @@ footer p > a{
     height: 25px;
     position: relative;
     top: 0.3em; 
+}
+
+/* Responsiveness */
+ @media (max-width: 1075px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    img {
+        width: 465.13px;
+        height: 358.5px;
+        object-fit: fill;
+    }
+    .project-title {
+        width: 465.13px;
+    }
+} 
+@media (max-width: 1015px) {
+    img {
+        width: 400px;
+        height: 329.6px
+    }
+    .project-title {
+        width: 400px;
+    }
+}
+@media (max-width: 885px) {
+    img {
+        width: 338.4px;
+        height: 329.6px
+    }
+    .project-title {
+        width: 338.4px;
+    }
+}
+@media (max-width: 768px) {
+    #title {
+        font-size: 40px;
+    }
+    #projects > h2 {
+        width: 450px;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    img {
+        width: 400.9px;
+        height: 329.6px
+    }
+    .project-title {
+        width: 400.9px;
+    }
+    .contact-link {
+        font-size: 22px;
+    }
 }
